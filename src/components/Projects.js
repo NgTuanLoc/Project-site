@@ -3,11 +3,8 @@ import styled from "styled-components";
 import Project from "./Project";
 const Projects = ({ title, projects }) => {
 
-  const data = {
-    name: {...projects[0]}.name,
-    url: {...projects[0]}.url,
-    image: {...projects[0]}.image,
-  } 
+  
+  
   return (
     <Wrapper>
       <div className="title">
@@ -16,6 +13,11 @@ const Projects = ({ title, projects }) => {
       </div>
       <div className="section-center">
         {projects.map((project) => {
+          const data = {
+            name: project.name,
+            url: project.url,
+            image: project.image,
+          } 
           return (
             <Project
               key={project.id}
