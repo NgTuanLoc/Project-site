@@ -7,7 +7,13 @@ const Hero = () => {
     <Wrapper>
       <div className="hero-center">
         <div className="hero-title">
-          <h1>React Projects</h1>
+          <h1>
+            My Projects <span>NgTuanLoc</span>{" "}
+          </h1>
+          <p></p>
+          <a href="https://github.com/" className="btn btn-hero">
+            Source code
+          </a>
         </div>
         <img src={heroImg1} alt="web development" className="img" />
       </div>
@@ -70,6 +76,7 @@ const Wrapper = styled.div`
     font-weight: 500;
     text-transform: uppercase;
     padding: 0.75rem 1.25rem;
+    margin-top: 3rem;
     box-shadow: var(--shadow-1);
     animation: bounce 2s infinite;
   }

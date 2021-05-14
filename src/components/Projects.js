@@ -2,9 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import Project from "./Project";
 const Projects = ({ title, projects }) => {
-
-  
-  
   return (
     <Wrapper>
       <div className="title">
@@ -17,13 +14,8 @@ const Projects = ({ title, projects }) => {
             name: project.name,
             url: project.url,
             image: project.image,
-          } 
-          return (
-            <Project
-              key={project.id}
-              {...data}
-            />
-          );
+          };
+          return <Project key={project.id} {...data} />;
         })}
       </div>
     </Wrapper>

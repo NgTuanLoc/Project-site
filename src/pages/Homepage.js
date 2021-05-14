@@ -25,7 +25,7 @@ const HomePage = () => {
   return (
     <>
       <Hero />
-      <Projects title="basic projects" projects={basicProjects} />
+      <Projects title="basic react projects" projects={basicProjects} />
       {/* <Projects title="course exclusive" projects={advancedProjects} /> */}
       {/* <Projects title="large-scale projects" projects={finalProjects} /> */}
     </>

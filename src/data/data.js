@@ -129,6 +129,36 @@ let data = [
     },
     image: "https://i.ibb.co/DknQYrJ/13-basic-stripe.png",
   },
+  {
+    id: 14,
+    data: {
+      type: null,
+      order: 14,
+      name: "Stripe",
+      url: "https://ngtuanloc-stripe.netlify.app",
+    },
+    image: "https://i.ibb.co/DknQYrJ/13-basic-stripe.png",
+  },
+  {
+    id: 15,
+    data: {
+      type: null,
+      order: 15,
+      name: "Stripe",
+      url: "https://ngtuanloc-stripe.netlify.app",
+    },
+    image: "https://i.ibb.co/DknQYrJ/13-basic-stripe.png",
+  },
+  {
+    id: 16,
+    data: {
+      type: null,
+      order: 16,
+      name: "Stripe",
+      url: "https://ngtuanloc-stripe.netlify.app",
+    },
+    image: "https://i.ibb.co/DknQYrJ/13-basic-stripe.png",
+  },
 ];
 
 export default data;
