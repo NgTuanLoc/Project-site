@@ -25,7 +25,7 @@ let data = [
       type: "basic",
       order: 3,
       name: "Reviews",
-      url: "https://i.ibb.co/BtkLCwk/3-basic-reviews.png",
+      url: "https://basic-reviews.netlify.app/",
     },
     image: "https://i.ibb.co/Tkycgry/3-basic-reviews.png",
   },

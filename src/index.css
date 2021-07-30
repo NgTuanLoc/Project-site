@@ -107,6 +107,7 @@ h5 {
 }
 .img {
   width: 100%;
+  object-fit: contain;
   display: block;
 }
 h1 {

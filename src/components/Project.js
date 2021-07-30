@@ -37,7 +37,7 @@ const Wrapper = styled.a`
     border-top-left-radius: var(--borderRadius);
     border-top-right-radius: var(--borderRadius);
     height: 15rem;
-    object-fit: cover;
+    object-fit: fill;
   }
 
   footer {
