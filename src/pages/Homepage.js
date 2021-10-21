@@ -15,19 +15,19 @@ const HomePage = () => {
   const basicProjects = formattedProjects
     .filter((project) => project.type === "basic")
     .sort((a, b) => a.order - b.order);
-  const advancedProjects = formattedProjects
-    .filter((project) => project.type === "advanced")
+  const cssProjects = formattedProjects
+    .filter((project) => project.type === "css")
     .sort((a, b) => a.order - b.order);
-  const finalProjects = formattedProjects
-    .filter((p) => p.type === "final")
+  const fullstackProjects = formattedProjects
+    .filter((p) => p.type === "fullstack")
     .sort((a, b) => a.order - b.order);
 
   return (
     <>
       <Hero />
+      <Projects title="CSS projects" projects={cssProjects} />
       <Projects title="basic react projects" projects={basicProjects} />
-      {/* <Projects title="course exclusive" projects={advancedProjects} /> */}
-      {/* <Projects title="large-scale projects" projects={finalProjects} /> */}
+      <Projects title="MEARN projects" projects={fullstackProjects} />
     </>
   );
 };

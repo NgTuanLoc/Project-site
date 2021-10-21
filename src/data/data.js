@@ -132,32 +132,62 @@ let data = [
   {
     id: 14,
     data: {
-      type: null,
+      type: "basic",
       order: 14,
-      name: "Stripe",
-      url: "https://ngtuanloc-stripe.netlify.app",
+      name: "Shopping Cart",
+      url: "https://ngtuanloc-shoppingcart.netlify.app",
     },
-    image: "https://i.ibb.co/DknQYrJ/13-basic-stripe.png",
+    image: "https://i.ibb.co/x8X7C21/14-basic-shoppingcart.png",
   },
   {
     id: 15,
     data: {
-      type: null,
+      type: "basic",
       order: 15,
-      name: "Stripe",
-      url: "https://ngtuanloc-stripe.netlify.app",
+      name: "Cocktails",
+      url: "https://ngtuanloc-cocktails.netlify.app",
     },
-    image: "https://i.ibb.co/DknQYrJ/13-basic-stripe.png",
+    image: "https://i.ibb.co/2F4LhkT/15-basic-cocktails.png",
   },
   {
     id: 16,
     data: {
-      type: null,
+      type: "css",
       order: 16,
-      name: "Stripe",
-      url: "https://ngtuanloc-stripe.netlify.app",
+      name: "Natours",
+      url: "https://ngtuanloc-natours.netlify.app/",
     },
-    image: "https://i.ibb.co/DknQYrJ/13-basic-stripe.png",
+    image: "https://i.ibb.co/bRQHTSJ/Natours.jpg",
+  },
+  {
+    id: 17,
+    data: {
+      type: "css",
+      order: 16,
+      name: "Trillo",
+      url: "https://ngtuanloc-trillo.netlify.app/",
+    },
+    image: "https://i.ibb.co/bKSgRBc/Trillo.jpg",
+  },
+  {
+    id: 18,
+    data: {
+      type: "css",
+      order: 16,
+      name: "Nexter",
+      url: "https://ngtuanloc-nexter.netlify.app/",
+    },
+    image: "https://i.ibb.co/nzgdXKT/Nexter.jpg",
+  },
+  {
+    id: 19,
+    data: {
+      type: "fullstack",
+      order: 16,
+      name: "Techshop",
+      url: "https://ntl-techshop.herokuapp.com/",
+    },
+    image: "https://i.ibb.co/xSCqZ01/Teachshop.jpg",
   },
 ];
 

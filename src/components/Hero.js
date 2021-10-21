@@ -11,7 +11,12 @@ const Hero = () => {
             My Projects <span>NgTuanLoc</span>{" "}
           </h1>
           <p></p>
-          <a href="https://github.com/" className="btn btn-hero">
+          <a
+            href="https://github.com/"
+            className="btn btn-hero"
+            target="_blank"
+            rel="noreferrer"
+          >
             Source code
           </a>
         </div>
