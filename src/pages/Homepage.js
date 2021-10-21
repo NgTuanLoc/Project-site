@@ -27,7 +27,7 @@ const HomePage = () => {
       <Hero />
       <Projects title="CSS projects" projects={cssProjects} />
       <Projects title="basic react projects" projects={basicProjects} />
-      <Projects title="MEARN projects" projects={fullstackProjects} />
+      <Projects title="MERN projects" projects={fullstackProjects} />
     </>
   );
 };
