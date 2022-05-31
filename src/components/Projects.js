@@ -1,6 +1,6 @@
-import React from "react";
 import styled from "styled-components";
 import Project from "./Project";
+
 const Projects = ({ title, projects }) => {
   return (
     <Wrapper>
