@@ -1,18 +1,41 @@
-import { useState, useEffect } from "react";
-const URL = "https://6295da9d75c34f1f3b22e21f.mockapi.io/ngtuanloc-projects";
-const useFetch = () => {
-  const [data, setData] = useState([]);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  const fetchData = async (url) => {
-    const response = await fetch(url);
-    const newData = await response.json();
-    setData(newData);
-  };
-  useEffect(() => {
-    fetchData(URL);
-  }, []);
+/* eslint-disable react-hooks/exhaustive-deps */
+import { useState, useEffect } from 'react';
+import lodash from 'lodash';
 
-  return { data };
+import { client } from '../client';
+
+const useFetch = (query) => {
+	const [data, setData] = useState([]);
+	const fetchData = async () => {
+		let newData = await client.fetch(query);
+		newData = newData.map((item) => {
+			const {
+				mainImage,
+				order,
+				title,
+				url,
+				category: { title: categoryTitle, order: categoryOrder },
+			} = item;
+
+			const category = {
+				categoryTitle,
+				categoryOrder,
+			};
+
+			return { category, order, title, url, mainImage };
+		});
+		newData = newData.sort(
+			(a, b) => a.category.categoryOrder - b.category.categoryOrder
+		);
+		newData = lodash.groupBy(newData, 'category.categoryTitle');
+
+		setData(newData);
+	};
+	useEffect(() => {
+		fetchData();
+	}, []);
+
+	return { data };
 };
 
 export default useFetch;

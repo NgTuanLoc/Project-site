@@ -1,7 +1,4 @@
-import { useEffect, useState } from 'react';
-
 import Homepage from './pages/Homepage';
-import { client, urlFor } from './client';
 
 function App() {
 	return <Homepage />;

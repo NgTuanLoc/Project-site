@@ -10,17 +10,17 @@ export default {
     },
     {
       name: 'order',
-      title: 'order',
+      title: 'Order',
       type: 'number',
     },
     {
       name: 'url',
-      title: 'Url',
+      title: 'Page URL',
       type: 'string',
     },
     {
       name: 'mainImage',
-      title: 'Main image',
+      title: 'Main Image',
       type: 'image',
       options: {
         hotspot: true,
