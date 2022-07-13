@@ -1,11 +1,17 @@
 import styled from 'styled-components';
 import Particles from 'react-tsparticles';
 import { loadFull } from 'tsparticles';
+import { useRef, useEffect } from 'react';
 
 import heroImg1 from '../assets/hero-1.svg';
-import { config } from '../config/test';
+import { config } from '../config/tsparticlesConfig';
+import { stagger } from '../animations/Bounce';
 
 const Hero = () => {
+	const nameRef = useRef();
+	const titleRef = useRef();
+	const sourceCodeRef = useRef();
+
 	const particlesInit = async (main) => {
 		// you can initialize the tsParticles instance (main) here, adding custom shapes or presets
 		// this loads the tsparticles package bundle, it's the easiest method for getting everything ready
@@ -14,8 +20,17 @@ const Hero = () => {
 	};
 
 	const particlesLoaded = (container) => {
-		console.log(container);
+		// console.log(container);
 	};
+
+	useEffect(() => {
+		stagger(
+			[nameRef.current, titleRef.current, sourceCodeRef.current],
+			{ y: 30 },
+			{ y: 0 }
+		);
+	}, []);
+
 	return (
 		<Wrapper>
 			<Particles
@@ -26,15 +41,16 @@ const Hero = () => {
 			/>
 			<div className='hero-center'>
 				<div className='hero-title'>
-					<h1>
-						My Projects <span>NgTuanLoc</span>{' '}
+					<h1 ref={nameRef}>
+						My Projects <span ref={titleRef}>NgTuanLoc</span>
 					</h1>
 					<p></p>
 					<a
 						href='https://github.com/'
 						className='btn btn-hero'
 						target='_blank'
-						rel='noreferrer'>
+						rel='noreferrer'
+						ref={sourceCodeRef}>
 						Source code
 					</a>
 				</div>
@@ -45,7 +61,8 @@ const Hero = () => {
 };
 
 const Wrapper = styled.header`
-	min-height: 60vh;
+	min-height: 65vh;
+	padding: 5rem 1rem;
 	position: relative;
 	background: linear-gradient(
 		30deg,
