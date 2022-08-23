@@ -9,7 +9,7 @@ const Project = ({ name, image, url }) => {
 			target='_blank'
 			rel='noopener noreferrer'
 			className='project'>
-			<img src={urlFor(image)} alt={name} className='img' />
+			<img src={urlFor(image)} alt={name} className='img' loading='lazy' />
 			<footer>
 				<h5>{name}</h5>
 			</footer>

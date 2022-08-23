@@ -148,24 +148,3 @@ const Wrapper = styled.header`
 `;
 
 export default Hero;
-
-{
-	/* <Wrapper>
-			<div className='hero-center'>
-				<div className='hero-title'>
-					<h1>
-						My Projects <span>NgTuanLoc</span>{' '}
-					</h1>
-					<p></p>
-					<a
-						href='https://github.com/'
-						className='btn btn-hero'
-						target='_blank'
-						rel='noreferrer'>
-						Source code
-					</a>
-				</div>
-				<img src={heroImg1} alt='web development' className='img bounce' />
-			</div>
-		</Wrapper> */
-}
