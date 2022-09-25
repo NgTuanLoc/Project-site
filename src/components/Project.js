@@ -2,8 +2,7 @@ import styled from 'styled-components';
 
 import { urlFor } from '../client';
 
-const Project = ({ name, image, url, source }) => {
-	console.log('🚀 ~ file: Project.js ~ line 6 ~ Project ~ source', source);
+const Project = ({ name, image, url, sourceCode }) => {
 	return (
 		<Wrapper className='project'>
 			<a href={url} target='_blank' rel='noopener noreferrer'>
@@ -12,7 +11,7 @@ const Project = ({ name, image, url, source }) => {
 			<footer>
 				<h5>{name}</h5>
 				<a
-					href={source}
+					href={sourceCode}
 					target='_blank'
 					rel='noopener noreferrer'
 					className='source-code'>

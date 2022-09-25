@@ -3,13 +3,14 @@ import Projects from '../components/Projects';
 import useFetch from '../hooks/useFetch';
 
 const projectQuery = `*[_type=="Project"]{
-	order, mainImage, title, source, url, "category":categories->{
+	order, mainImage, title, sourceCode, url, "category":categories->{
 		title, order
 	}
 }`;
 
 const HomePage = () => {
 	const { data: projects } = useFetch(projectQuery);
+
 	const categories = Object.keys(projects);
 
 	return (

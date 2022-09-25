@@ -17,6 +17,7 @@ const Projects = ({ title, projects }) => {
 						name: project.title,
 						url: project.url,
 						image: project.mainImage,
+						sourceCode: project.sourceCode,
 					};
 					return <Project key={id} {...data} />;
 				})}

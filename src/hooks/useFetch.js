@@ -14,6 +14,7 @@ const useFetch = (query) => {
 				order,
 				title,
 				url,
+				sourceCode,
 				category: { title: categoryTitle, order: categoryOrder },
 			} = item;
 
@@ -22,7 +23,7 @@ const useFetch = (query) => {
 				categoryOrder,
 			};
 
-			return { category, order, title, url, mainImage };
+			return { category, order, title, url, sourceCode, mainImage };
 		});
 		newData = newData.sort(
 			(a, b) => a.category.categoryOrder - b.category.categoryOrder

@@ -19,7 +19,7 @@ export default {
       type: 'string',
     },
     {
-      name: 'source',
+      name: 'sourceCode',
       title: 'Source Code',
       type: 'string',
     },
