@@ -19,6 +19,11 @@ export default {
       type: 'string',
     },
     {
+      name: 'sourceCode',
+      title: 'Source Code',
+      type: 'string',
+    },
+    {
       name: 'mainImage',
       title: 'Main Image',
       type: 'image',

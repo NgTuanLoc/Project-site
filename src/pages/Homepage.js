@@ -3,7 +3,7 @@ import Projects from '../components/Projects';
 import useFetch from '../hooks/useFetch';
 
 const projectQuery = `*[_type=="Project"]{
-	order, mainImage, title, url, "category":categories->{
+	order, mainImage, title, sourceCode, url, "category":categories->{
 		title, order
 	}
 }`;
