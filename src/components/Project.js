@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { AiFillCode } from 'react-icons/ai';
 
 import { urlFor } from '../client';
 
@@ -9,14 +10,15 @@ const Project = ({ name, image, url, sourceCode }) => {
 				<img src={urlFor(image)} alt={name} className='img' loading='lazy' />
 			</a>
 			<footer>
-				<h5>{name}</h5>
 				<a
 					href={sourceCode}
 					target='_blank'
 					rel='noopener noreferrer'
 					className='source-code'>
-					source code
+					<AiFillCode className='bounce' />
 				</a>
+
+				<h5>{name}</h5>
 			</footer>
 		</Wrapper>
 	);
@@ -27,20 +29,14 @@ const Wrapper = styled.div`
 	box-shadow: var(--shadow-1);
 	transition: var(--transition);
 	border-radius: var(--borderRadius);
+	position: relative;
 
 	.source-code {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		padding: 0.2rem;
-		text-transform: capitalize;
-		display: block;
-		color: white;
-		text-align: center;
-		font-size: 0.8rem;
-		background-color: green;
-		border-radius: var(--borderRadius);
-		cursor: pointer;
+		position: absolute;
+		top: 6px;
+		right: 6px;
+		font-size: 2rem;
+		color: black;
 	}
 
 	&:hover {
@@ -61,7 +57,7 @@ const Wrapper = styled.div`
 		padding: 1rem 1.25rem;
 		background: var(--white);
 		display: flex;
-		justify-content: space-between;
+		justify-content: center;
 		align-items: center;
 		gap: 1rem;
 		border-bottom-left-radius: var(--borderRadius);
@@ -71,6 +67,11 @@ const Wrapper = styled.div`
 		margin-bottom: 0;
 		color: var(--grey-900);
 		font-weight: 500;
+	}
+
+	.bounce {
+		transform: all 1s linear;
+		animation: bounce 5s infinite;
 	}
 `;
 
